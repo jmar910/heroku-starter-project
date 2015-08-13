@@ -1,0 +1,27 @@
+.search-bar {
+  @include heroku-gradient();
+  height: 70px;
+}
+
+.filter-bar {
+  height: 50px;
+  background-color: $heroku-purple;
+}
+
+.main-content {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.addon-service-list {
+  @include default-box-shadow();
+  background-color: $white;
+  margin-top: 30px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
