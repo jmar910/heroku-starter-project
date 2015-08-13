@@ -1,5 +1,21 @@
-<p>{{model}}</p>
+<div class="main-bar">
+  <div class="addon-services-container">
+    <div class="title">{{model.humanName}} Add-on</div>
+  </div>
+</div>
 
-{{#each model.plans as |plan|}}
-<p>{{plan}}</p>
-{{/each}}
+<div class="sub-bar">
+  <div class="addon-services-container">
+    <div class="back-to-addons">{{fa-icon 'angle-left' size='lg'}}
+      {{#link-to 'addon-services'}}Back to Add-ons{{/link-to}}
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <ul>
+    {{#each model.plans as |plan|}}
+      <li>{{plan.humanName}} {{plan.price.cents}}</li>
+    {{/each}}
+  </ul>
+</div>
