@@ -20,6 +20,10 @@ li.addon-service-list-item {
     position: relative;
     top: 5px;
     float: right;
+
+    i {
+      font-weight: bold;
+    }
   }
 
 }

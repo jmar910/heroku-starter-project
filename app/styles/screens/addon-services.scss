@@ -7,16 +7,27 @@
 .search-bar {
   @include heroku-gradient();
   height: 70px;
+}
+
+.search-field {
+  position: relative;
+
+  i {
+    position: absolute;
+    color: gray;
+    top: 28px;
+    left: 10px;
+  }
 
   input {
-    height: 30px;
+    height: 40px;
     margin-top: 15px;
     width: 100%;
     border-radius: 3px;
     border: none;
     outline: none;
     font-size: 18px;
-    padding: 5px;
+    padding: 5px 5px 5px 40px;
   }
 }
 
