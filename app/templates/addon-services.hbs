@@ -3,5 +3,11 @@
 <div class="filter-bar"></div>
 
 <div class="main-content">
-  <ul></ul>
+  <div class="addon-service-list">
+    <ul>
+      {{#each model as |addonService|}}
+        <li>{{#link-to 'addon-service' addonService}}{{addonService.name}}{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

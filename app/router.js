@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('addon-services');
+  this.route('addon-service', { path: '/addon-services/:addon-service_id' });
 });
 
 export default Router;
