@@ -10,5 +10,12 @@ export default ApplicationSerializer.extend({
     payload = { addonServices: payload };
 
     return this._super(store, type, payload);
+  },
+
+  extractSingle: function(store, type, payload) {
+    payload.links = { plans: "/addon-services/" + payload.name + "/plans"};
+
+    payload = { addonService: payload };
+    return this._super(store, type, payload);
   }
 });
