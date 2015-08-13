@@ -1,18 +1,32 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  filteredModels: Ember.computed('filterType', function() {
+
+  filteredModels: Ember.computed('filterType', 'filterText', function() {
     let type = this.get('filterType');
 
+    let searchFilteredModels = this._searchFilter();
+
     if (type === 'all') {
-      return this.get('model');
+      return searchFilteredModels;
     }
     else {
-      return this.get('model').filterBy('state', type);
+      return searchFilteredModels.filterBy('state', type);
     }
   }),
 
   filterType: 'all',
+
+  filterText: '',
+
+  _searchFilter: function() {
+    let models = this.get('model');
+    let filterText = this.get('filterText');
+
+    return models.filter(function(model) {
+      return model.get('humanName').toLowerCase().indexOf(filterText.toLowerCase()) !== -1;
+    });
+  },
 
   actions: {
     filterModels(type) {

@@ -1,25 +1,25 @@
 <div class="search-bar">
   <div class="addon-services-container">
-    {{input type="text"}}
+    {{input type="text" value=filterText}}
   </div>
 </div>
 
 <div class="filter-bar">
   <div class="addon-services-container">
     {{#filter-link type="all" currentFilterType=filterType}}
-      Show All
+      SHOW ALL
     {{/filter-link}}
 
     {{#filter-link type="ga" currentFilterType=filterType}}
-      Stable
+      STABLE
     {{/filter-link}}
 
     {{#filter-link type="alpha" currentFilterType=filterType}}
-      Alpha
+      ALPHA
     {{/filter-link}}
 
     {{#filter-link type="beta" currentFilterType=filterType}}
-      Beta
+      BETA
     {{/filter-link}}
   </div>
 </div>
