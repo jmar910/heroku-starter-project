@@ -1,12 +1,17 @@
-<div class="search-bar"></div>
+<div class="search-bar">
+  <div class="addon-services-container">
+    {{input type="text"}}
+  </div>
+</div>
 
-<div class="filter-bar"></div>
+<div class="filter-bar">
+</div>
 
 <div class="main-content">
   <div class="addon-service-list">
     <ul>
       {{#each model as |addonService|}}
-        <li>{{#link-to 'addon-service' addonService}}{{addonService.name}}{{/link-to}}</li>
+        {{addon-service-list-item model=addonService}}
       {{/each}}
     </ul>
   </div>

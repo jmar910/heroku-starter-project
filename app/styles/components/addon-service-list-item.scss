@@ -1,0 +1,26 @@
+li.addon-service-list-item {
+  padding: 5px;
+  height: 30px;
+  border-bottom: 1px solid black;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+
+  .addon-service-picture {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: gray;
+    vertical-align: middle;
+  }
+
+  .arrow {
+    position: relative;
+    top: 5px;
+    float: right;
+  }
+
+}
