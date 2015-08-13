@@ -1,0 +1,22 @@
+.filter-link {
+  float: left;
+  width: 25%;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 15px;
+  color: white;
+  opacity: 0.5;
+  height: 31px;
+
+  &.active {
+    color: white;
+    opacity: 1;
+    border-bottom: 3px solid blue;
+  }
+
+  &:hover {
+    color: white;
+    opacity: 1;
+    border-bottom: 3px solid blue;
+  }
+}

@@ -5,12 +5,29 @@
 </div>
 
 <div class="filter-bar">
+  <div class="addon-services-container">
+    {{#filter-link type="all" currentFilterType=filterType}}
+      Show All
+    {{/filter-link}}
+
+    {{#filter-link type="ga" currentFilterType=filterType}}
+      Stable
+    {{/filter-link}}
+
+    {{#filter-link type="alpha" currentFilterType=filterType}}
+      Alpha
+    {{/filter-link}}
+
+    {{#filter-link type="beta" currentFilterType=filterType}}
+      Beta
+    {{/filter-link}}
+  </div>
 </div>
 
 <div class="main-content">
   <div class="addon-service-list">
     <ul>
-      {{#each model as |addonService|}}
+      {{#each filteredModels as |addonService|}}
         {{addon-service-list-item model=addonService}}
       {{/each}}
     </ul>
