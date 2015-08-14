@@ -3,8 +3,10 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   actions: {
     signIn: function() {
-      // The provider name is passed to `open`
-      this.get('session').open('heroku-oauth2');
+      this.get('session').open('heroku-oauth2').then((data) => {
+        this.get('session').set('isAuthenticated', true)
+        this.transitionTo('apps');
+      });
     }
   }
 });

@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('addon-services');
   this.route('addon-service', { path: '/addon-services/:addon-service_id' });
+  this.route('apps');
 });
 
 export default Router;
