@@ -1,0 +1,29 @@
+.login-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-box {
+  margin-top: 50px;
+  background-color: $white;
+  @include default-box-shadow();
+  padding: 10px;
+
+  h2 {
+    margin-top: 0;
+    color: $heroku-purple;
+    text-align: center;
+  }
+}
+
+button {
+  display: block;
+  height: 40px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  background-color: $heroku-purple;
+  color: white;
+}
