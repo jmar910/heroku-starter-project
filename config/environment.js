@@ -20,6 +20,7 @@ module.exports = function(environment) {
 
     torii: {
      // a 'session' property will be injected on routes and controllers
+     apiSecret: 'b2150b34-43f6-4a6d-b2f0-5fc40e443b7d',
      sessionServiceName: 'session',
      providers: {
        'heroku-oauth2': {
@@ -27,7 +28,17 @@ module.exports = function(environment) {
          redirectUri: 'http://localhost:4200/login/oauth'
        }
      }
-   }
+   },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self'",
+      'connect-src': "'self' https://api.heroku.com",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
+    }
   };
 
   if (environment === 'development') {
