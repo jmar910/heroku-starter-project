@@ -30,5 +30,11 @@ export default ApplicationAdapter.extend({
       };
     });
 
+  },
+
+  close: function() {
+    return new Ember.RSVP.Promise(function(resolve, reject){
+      resolve();
+    });
   }
 });
