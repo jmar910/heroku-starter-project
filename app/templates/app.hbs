@@ -13,21 +13,29 @@
 </div>
 
 <div class="main-content">
-  <div class="addon-list current-addons">
     <h3>Current Addons</h3>
-    <ul>
-      {{#each model.addons as |addon|}}
-        <li>
-          <div class="name">{{addon.addonService.name}}</div>
+    <div class="list current-addons">
+      <ul>
+        {{#each model.addons as |addon|}}
+          <li>
+            <div class="name">{{addon.addonService.name}}</div>
 
-          <div class="plan-name">{{addon.planName}}</div>
+            <div class="plan-name">{{addon.planName}}</div>
+            <div class="clearfix"></div>
+          </li>
+        {{/each}}
+      </ul>
+  </div>
+
+    <h3>Add Addons</h3>
+    <div class="list new-addons">
+    <ul>
+      {{#each addonServices as |addonService|}}
+        <li>
+          <div class="name">{{addonService.humanName}}</div>
           <div class="clearfix"></div>
         </li>
       {{/each}}
     </ul>
-  </div>
-
-  <div class="addon-list new-addons">
-    <h3>Add Addons</h3>
   </div>
 </div>
