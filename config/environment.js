@@ -16,7 +16,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    torii: {
+     // a 'session' property will be injected on routes and controllers
+     sessionServiceName: 'session',
+     providers: {
+       'heroku-oauth2': {
+         apiKey:      'e9b1ffbe-31fa-48c2-abba-057f04a6cdc8',
+         redirectUri: 'http://localhost:4200/login/oauth'
+       }
+     }
+   }
   };
 
   if (environment === 'development') {
