@@ -30,7 +30,7 @@ export default ApplicationAdapter.extend({
       // you may also want to persist the new session with cookies or via
       // localStorage.
       return {
-        authToken: data.accessToken
+        authToken: data.access_token.token
       };
     });
 
