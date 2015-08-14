@@ -1,5 +1,7 @@
 {{#link-to 'addon-service' model}}
-  <div class="addon-service-picture"></div>
+  <div class="addon-service-picture">
+    <img src={{model.imageUrl}} />
+  </div>
   {{model.humanName}}
   <div class="arrow"> {{fa-icon "angle-right" size="lg"}}</div>
   <div class="clearfix"></div>

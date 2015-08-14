@@ -13,9 +13,11 @@
 </div>
 
 <div class="main-content">
+  <div class="addon-plan-list addon-service-list">
   <ul>
     {{#each model.plans as |plan|}}
-      <li>{{plan.humanName}} {{plan.price.cents}}</li>
+      <li class="addon-service-list-item">{{plan.humanName}} <div class="price">${{plan.priceInDollars}}/{{plan.price.unit}}</div></li>
     {{/each}}
   </ul>
+</div>
 </div>

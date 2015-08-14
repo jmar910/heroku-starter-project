@@ -7,16 +7,20 @@
   color: white;
   opacity: 0.5;
   height: 50px;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
 
   &.active {
     color: white;
     opacity: 1;
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid $accent-blue;
   }
 
   &:hover {
     color: white;
     opacity: 1;
-    border-bottom: 3px solid blue;
+    border-bottom: 3px solid $accent-blue;
   }
 }

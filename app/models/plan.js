@@ -6,5 +6,11 @@ export default DS.Model.extend({
   price: DS.attr(),
   description: DS.attr('string'),
 
-  addonService: DS.belongsTo('addon-service')
+  addonService: DS.belongsTo('addon-service'),
+
+  priceInDollars: Ember.computed('price', function() {
+    let cents = this.get('price.cents');
+    let dollars = cents / 100;
+    return dollars;
+  })
 });

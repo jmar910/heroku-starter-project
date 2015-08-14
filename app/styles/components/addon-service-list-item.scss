@@ -1,6 +1,10 @@
 li.addon-service-list-item {
   padding: 10px 5px 10px 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid $background-gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
 
   a {
     display: block;
@@ -12,8 +16,13 @@ li.addon-service-list-item {
     display: inline-block;
     height: 30px;
     width: 30px;
-    background-color: gray;
     vertical-align: middle;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+    }
   }
 
   .arrow {
@@ -23,6 +32,7 @@ li.addon-service-list-item {
 
     i {
       font-weight: bold;
+      opacity: 0.4;
     }
   }
 
