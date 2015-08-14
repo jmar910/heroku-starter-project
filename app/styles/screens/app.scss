@@ -1,0 +1,24 @@
+.addon-list {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    @include default-box-shadow();
+    border-radius: 3px;
+  }
+
+  li {
+    padding: 10px 5px 10px 5px;
+    border-bottom: 2px solid $background-gray;
+  }
+}
+
+.current-addons {
+  .name {
+    float: left;
+  }
+  .plan-name {
+    float: right;
+  }
+}

@@ -1,1 +1,24 @@
-{{outlet}}
+<div class="main-bar">
+  {{partial 'nav-links'}}
+
+  <div class="addon-services-container">
+    <div class="search-field">
+      {{fa-icon "search" size='lg'}}
+      {{input type="text" value=filterText}}
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="addon-plan-list addon-service-list">
+    <ul>
+      {{#each model as |app|}}
+        <li class="addon-service-list-item">
+          {{#link-to 'app' app}}
+            {{app.name}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

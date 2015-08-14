@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('addon-services');
   this.route('addon-service', { path: '/addon-services/:addon-service_id' });
   this.route('apps');
+  this.route('app',  { path: '/apps/:app_id' });
 });
 
 export default Router;

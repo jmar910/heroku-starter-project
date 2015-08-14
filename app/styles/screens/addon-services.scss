@@ -4,11 +4,6 @@
   margin-right: auto;
 }
 
-.main-bar {
-  @include heroku-gradient();
-  height: 70px;
-}
-
 .search-field {
   position: relative;
 

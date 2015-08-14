@@ -8,6 +8,8 @@ body {
   font-family: sans-serif;
 }
 
+@import 'shared';
 @import 'login';
 @import 'addon-services';
 @import 'addon-service';
+@import 'app';

@@ -1,4 +1,7 @@
 <div class="main-bar">
+
+  {{partial 'nav-links'}}
+
   <div class="addon-services-container">
     <div class="title">{{model.humanName}} Add-on</div>
   </div>
@@ -14,10 +17,10 @@
 
 <div class="main-content">
   <div class="addon-plan-list addon-service-list">
-  <ul>
-    {{#each model.plans as |plan|}}
-      <li class="addon-service-list-item">{{plan.humanName}} <div class="price">${{plan.priceInDollars}}/{{plan.price.unit}}</div></li>
-    {{/each}}
-  </ul>
-</div>
+    <ul>
+      {{#each model.plans as |plan|}}
+        <li class="addon-service-list-item">{{plan.humanName}} <div class="price">${{plan.priceInDollars}}/{{plan.price.unit}}</div></li>
+      {{/each}}
+    </ul>
+  </div>
 </div>
