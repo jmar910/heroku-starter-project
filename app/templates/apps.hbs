@@ -1,7 +1,7 @@
 <div class="main-bar">
   {{partial 'nav-links'}}
 
-  <div class="addon-services-container">
+  <div class="main-container">
     <div class="search-field">
       {{fa-icon "search" size='lg'}}
       {{input type="text" value=filterText}}
@@ -10,12 +10,13 @@
 </div>
 
 <div class="main-content">
-  <div class="addon-plan-list addon-service-list">
+  <div class="list">
     <ul>
       {{#each model as |app|}}
-        <li class="addon-service-list-item">
+        <li>
           {{#link-to 'app' app}}
             {{app.name}}
+            <div class="arrow"> {{fa-icon "angle-right" size="lg"}}</div>
           {{/link-to}}
         </li>
       {{/each}}

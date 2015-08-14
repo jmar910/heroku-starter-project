@@ -1,7 +1,7 @@
 <div class="main-bar">
   {{partial 'nav-links'}}
   
-  <div class="addon-services-container">
+  <div class="main-container">
     <div class="search-field">
       {{fa-icon "search" size='lg'}}
       {{input type="text" value=filterText}}
@@ -10,7 +10,7 @@
 </div>
 
 <div class="sub-bar">
-  <div class="addon-services-container">
+  <div class="main-container">
     {{#filter-link type="all" currentFilterType=filterType}}
       SHOW ALL
     {{/filter-link}}

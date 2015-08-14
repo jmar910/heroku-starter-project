@@ -1,3 +1,9 @@
+.main-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-bar {
   @include heroku-gradient();
   height: 110px;
@@ -18,6 +24,53 @@
       cursor: pointer;
       text-decoration: none;
       color: white;
+    }
+  }
+}
+
+.back-to {
+  color: $white;
+  padding-top: 15px;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.list {
+  @include default-box-shadow();
+  background-color: $white;
+  margin-top: 30px;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 10px 5px 10px 5px;
+    border-bottom: 2px solid $background-gray;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  .arrow {
+    position: relative;
+    float: right;
+
+    i {
+      font-weight: bold;
+      opacity: 0.4;
     }
   }
 }
