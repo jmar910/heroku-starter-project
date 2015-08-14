@@ -62,6 +62,17 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.torii = {
+     // a 'session' property will be injected on routes and controllers
+     apiSecret: 'facfce23-8118-4bd3-8d53-396e80625e74',
+     sessionServiceName: 'session',
+     providers: {
+       'heroku-oauth2': {
+         apiKey:      'bb4f5523-6486-4363-9075-ededab9ae13a',
+         redirectUri: 'https://james-martinez-starter-project.herokuapp.com/login/oauth'
+       }
+     }
+   }
 
   }
 
